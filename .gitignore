@@ -1,0 +1,13 @@
+*.o
+doc/Doxyfile.tmp
+doc/html/
+lib/
+obj/
+test/deque-test
+test/doubly-linked-list-test
+test/map-test
+test/queue-test
+test/random-elems-test
+test/singly-linked-list-test
+test/stack-test
+test/tree-test
