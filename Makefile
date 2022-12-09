@@ -9,9 +9,9 @@ INCDIR ?= $(PREFIX)/include
 MKDIR=mkdir -pv
 RM=rm -vf
 
-CC=g++
-# Note: remove the '-g' and '-O0' flags below if you won't do debugging
-CFLAGS=-Wall -Wextra -Werror -pedantic -g -O0 -fPIC -Iinclude -Itest
+CC=gcc
+# Note: remove the '-ggdb3' and '-O0' flags below if you won't do debugging
+CFLAGS=-Wall -Wextra -Wshadow -Wconversion -Werror -pedantic -ggdb3 -O0 -fPIC -Iinclude -Itest
 
 ###################################
 # Main target: the static lib one #

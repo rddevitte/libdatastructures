@@ -54,14 +54,14 @@ map_s *map_new(void)
 
 /* ************************************************************************************************/
 
-void *map_find(map_s *map, void *key, int (*pair_compare)(void *, void *))
+void *map_find(map_s *map, void *key, int (*map_pair_compare)(void *, void *))
 {
-    if (NULL == map || NULL == key || NULL == pair_compare)
+    if (NULL == map || NULL == key || NULL == map_pair_compare)
         return NULL;
 
     pair_s *dummy = pair_new(key, NULL);
 
-    pair_s *found_pair = (pair_s *)tree_find(map, dummy, pair_compare);
+    pair_s *found_pair = (pair_s *)tree_find(map, dummy, map_pair_compare);
 
     free(dummy);
 
@@ -73,7 +73,7 @@ void *map_find(map_s *map, void *key, int (*pair_compare)(void *, void *))
 
 /* ************************************************************************************************/
 
-map_rc_e map_insert(map_s *map, void *key, void *value, int (*pair_compare)(void *, void *))
+map_rc_e map_insert(map_s *map, void *key, void *value, int (*map_pair_compare)(void *, void *))
 {
     if (NULL == map)
         return MAP_RC_NULL;
@@ -81,12 +81,12 @@ map_rc_e map_insert(map_s *map, void *key, void *value, int (*pair_compare)(void
     if (NULL == key)
         return MAP_RC_KEY_NULL;
 
-    if (NULL == pair_compare)
+    if (NULL == map_pair_compare)
         return MAP_RC_PAIR_CB_NULL;
 
     pair_s *new_pair = pair_new(key, value);
 
-    map_rc_e rc = tree_rc_to_map_rc(tree_insert(map, new_pair, pair_compare));
+    map_rc_e rc = tree_rc_to_map_rc(tree_insert(map, new_pair, map_pair_compare));
 
     if (MAP_RC_OK != rc)
         free(new_pair);
@@ -96,14 +96,14 @@ map_rc_e map_insert(map_s *map, void *key, void *value, int (*pair_compare)(void
 
 /* ************************************************************************************************/
 
-void *map_replace(map_s *map, void *key, void *new_value, int (*pair_compare)(void *, void *))
+void *map_replace(map_s *map, void *key, void *new_value, int (*map_pair_compare)(void *, void *))
 {
-    if (NULL == map || NULL == key || NULL == pair_compare)
+    if (NULL == map || NULL == key || NULL == map_pair_compare)
         return NULL;
 
     pair_s *dummy = pair_new(key, NULL);
 
-    pair_s *found = (pair_s *)tree_find(map, dummy, pair_compare);
+    pair_s *found = (pair_s *)tree_find(map, dummy, map_pair_compare);
 
     free(dummy);
 
@@ -118,21 +118,21 @@ void *map_replace(map_s *map, void *key, void *new_value, int (*pair_compare)(vo
 
 /* ************************************************************************************************/
 
-map_rc_e map_traverse(map_s *map, void (*pair_visit)(void *))
+map_rc_e map_traverse(map_s *map, void (*map_pair_visit)(void *))
 {
-    return tree_rc_to_map_rc(tree_traverse(map, TREE_TRAVERSAL_INORDER, pair_visit));
+    return tree_rc_to_map_rc(tree_traverse(map, TREE_TRAVERSAL_INORDER, map_pair_visit));
 }
 
 /* ************************************************************************************************/
 
-pair_s *map_remove(map_s *map, void *key, int (*pair_compare)(void *, void *))
+pair_s *map_remove(map_s *map, void *key, int (*map_pair_compare)(void *, void *))
 {
-    if (NULL == map || NULL == key || NULL == pair_compare)
+    if (NULL == map || NULL == key || NULL == map_pair_compare)
         return NULL;
 
     pair_s *dummy = pair_new(key, NULL);
 
-    pair_s *removed = (pair_s *)tree_remove(map, dummy, pair_compare);
+    pair_s *removed = (pair_s *)tree_remove(map, dummy, map_pair_compare);
 
     free(dummy);
 
@@ -141,14 +141,14 @@ pair_s *map_remove(map_s *map, void *key, int (*pair_compare)(void *, void *))
 
 /* ************************************************************************************************/
 
-map_rc_e map_clear(map_s *map, void (*pair_destroy)(void **))
+map_rc_e map_clear(map_s *map, void (*map_pair_destroy)(void **))
 {
-    return tree_rc_to_map_rc(tree_clear(map, pair_destroy));
+    return tree_rc_to_map_rc(tree_clear(map, map_pair_destroy));
 }
 
 /* ************************************************************************************************/
 
-map_rc_e map_destroy(map_s **map, void (*pair_destroy)(void **))
+map_rc_e map_destroy(map_s **map, void (*map_pair_destroy)(void **))
 {
-    return tree_rc_to_map_rc(tree_destroy(map, pair_destroy));
+    return tree_rc_to_map_rc(tree_destroy(map, map_pair_destroy));
 }

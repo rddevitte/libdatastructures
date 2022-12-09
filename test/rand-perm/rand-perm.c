@@ -27,7 +27,7 @@ void rand_perm_gen_init(rand_perm_gen_t *gen, int m, int n)
 
     int c = n - m + 1;
 
-    gen->nums = (int *)calloc(c, sizeof(int));
+    gen->nums = (int *)calloc((size_t)c, sizeof(int));
 
     if (NULL == gen->nums)
         return;
@@ -75,7 +75,7 @@ static int rand_between(int m, int n)
     static bool init_seed = false;
 
     if (!init_seed) {
-        srand(time(NULL));
+        srand((unsigned int)time(NULL));
         init_seed = true;
     }
 
