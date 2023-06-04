@@ -32,6 +32,19 @@ libdir:
 objdir:
 	@$(MKDIR) obj
 
+######################
+# Array object files #
+######################
+
+obj/array-node.o: src/libdatastructures/array/array-node.c \
+                  include/libdatastructures/array/array-node.h | objdir
+	$(CC) -c $< -o $@ $(CFLAGS)
+
+obj/array.o: src/libdatastructures/array/array.c \
+             include/libdatastructures/array/array.h \
+             include/libdatastructures/array/array-node.h | objdir
+	$(CC) -c $< -o $@ $(CFLAGS)
+
 ###################################
 # Singly linked list object files #
 ###################################
@@ -117,6 +130,7 @@ obj/map.o: src/libdatastructures/map/map.c \
 
 lib/libdatastructures.a: obj/singly-linked-list-node.o obj/singly-linked-list.o \
                          obj/doubly-linked-list-node.o obj/doubly-linked-list.o \
+                         obj/array-node.o obj/array.o \
                          obj/stack.o \
                          obj/queue.o \
                          obj/deque.o \
@@ -152,6 +166,21 @@ test/fruit/fruit.o: test/fruit/fruit.c test/fruit/fruit.h
 test/rand-perm/rand-perm.o: test/rand-perm/rand-perm.c \
                             test/rand-perm/rand-perm.h
 	$(CC) -c $< -o $@ $(CFLAGS)
+
+##############################
+# Array unit test simulation #
+##############################
+
+test/array-test.o: test/array-test.c \
+                   test/number/number.h \
+                   include/libdatastructures/array/array.h
+	$(CC) -c $< -o $@ $(CFLAGS)
+
+test/array-test: test/number/number.o \
+                 test/array-test.o \
+                 lib/libdatastructures.a
+	$(CC) -o $@ $^
+	valgrind ./$@
 
 ###########################################
 # Singly-linked list unit test simulation #
@@ -303,6 +332,7 @@ clean:
 	@$(RM) test/rand-perm/rand-perm.o
 	@$(RM) test/singly-linked-list-test
 	@$(RM) test/doubly-linked-list-test
+	@$(RM) test/array-test
 	@$(RM) test/stack-test
 	@$(RM) test/queue-test
 	@$(RM) test/deque-test

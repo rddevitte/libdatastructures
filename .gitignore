@@ -3,6 +3,7 @@ doc/Doxyfile.tmp
 doc/html/
 lib/
 obj/
+test/array-test
 test/deque-test
 test/doubly-linked-list-test
 test/map-test
