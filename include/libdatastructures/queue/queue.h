@@ -2,8 +2,8 @@
  * \file   queue.h
  * \brief  Queue data structure - struct. and type definitions and functions declarations
  */
-#ifndef QUEUE_H
-#define QUEUE_H
+#ifndef LIBDATASTRUCTURES_QUEUE_H
+#define LIBDATASTRUCTURES_QUEUE_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -111,4 +111,4 @@ queue_rc_e queue_destroy(queue_s **queue, void (*elem_destroy)(void **));
 } /* extern "C" */
 #endif
 
-#endif /* QUEUE_H */
+#endif /* LIBDATASTRUCTURES_QUEUE_H */

@@ -2,8 +2,8 @@
  * \file   singly-linked-list.h
  * \brief  Circular singly linked list - struct. and type definitions and function declarations
  */
-#ifndef SINGLY_LINKED_LIST_H
-#define SINGLY_LINKED_LIST_H
+#ifndef LIBDATASTRUCTURES_SINGLY_LINKED_LIST_H
+#define LIBDATASTRUCTURES_SINGLY_LINKED_LIST_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -113,4 +113,4 @@ s_l_list_rc_e s_l_list_destroy(s_l_list_s **list, void (*elem_destroy)(void **))
 } /* extern "C" */
 #endif
 
-#endif /* SINGLY_LINKED_LIST_H */
+#endif /* LIBDATASTRUCTURES_SINGLY_LINKED_LIST_H */

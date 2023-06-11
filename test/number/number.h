@@ -2,8 +2,8 @@
  * \file   number.h
  * \brief  Auxiliary lib for tests which creates, prints, compares and destroys number elements
  */
-#ifndef NUMBER_H
-#define NUMBER_H
+#ifndef LIBDATASTRUCTURES_NUMBER_H
+#define LIBDATASTRUCTURES_NUMBER_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -45,4 +45,4 @@ void number_destroy(void **n);
 } /* extern "C" */
 #endif
 
-#endif /* NUMBER_H */
+#endif /* LIBDATASTRUCTURES_NUMBER_H */

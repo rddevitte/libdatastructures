@@ -2,8 +2,8 @@
  * \file   deque.h
  * \brief  Doubly-ended queue ("deque") data structure - struct. and type defs. and funcs. decls.
  */
-#ifndef DEQUE_H
-#define DEQUE_H
+#ifndef LIBDATASTRUCTURES_DEQUE_H
+#define LIBDATASTRUCTURES_DEQUE_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -133,4 +133,4 @@ deque_rc_e deque_destroy(deque_s **deque, void (*elem_destroy)(void **));
 } /* extern "C" */
 #endif
 
-#endif /* DEQUE_H */
+#endif /* LIBDATASTRUCTURES_DEQUE_H */

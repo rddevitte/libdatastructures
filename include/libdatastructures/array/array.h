@@ -2,8 +2,8 @@
  * \file   array.h
  * \brief  Array - struct. and type definitions and function declarations
  */
-#ifndef ARRAY_H
-#define ARRAY_H
+#ifndef LIBDATASTRUCTURES_ARRAY_H
+#define LIBDATASTRUCTURES_ARRAY_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -203,4 +203,4 @@ array_rc_e array_destroy(array_s **a, void (*elem_destroy)(void **));
 } /* extern "C" */
 #endif
 
-#endif /* ARRAY_H */
+#endif /* LIBDATASTRUCTURES_ARRAY_H */

@@ -2,8 +2,8 @@
  * \file   doubly-linked-list.h
  * \brief  Circular doubly linked list - struct. and type definitions and function declarations
  */
-#ifndef DOUBLY_LINKED_LIST_H
-#define DOUBLY_LINKED_LIST_H
+#ifndef LIBDATASTRUCTURES_DOUBLY_LINKED_LIST_H
+#define LIBDATASTRUCTURES_DOUBLY_LINKED_LIST_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -129,4 +129,4 @@ d_l_list_rc_e d_l_list_destroy(d_l_list_s **list, void (*elem_destroy)(void **))
 } /* extern "C" */
 #endif
 
-#endif /* DOUBLY_LINKED_LIST_H */
+#endif /* LIBDATASTRUCTURES_DOUBLY_LINKED_LIST_H */

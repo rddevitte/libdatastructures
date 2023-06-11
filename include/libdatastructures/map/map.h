@@ -2,8 +2,8 @@
  * \file   map.h
  * \brief  Map - structure, types and functions
  */
-#ifndef MAP_H
-#define MAP_H
+#ifndef LIBDATASTRUCTURES_MAP_H
+#define LIBDATASTRUCTURES_MAP_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -138,4 +138,4 @@ map_rc_e map_destroy(map_s **map, void (*map_pair_destroy)(void **));
 } /* extern "C" */
 #endif
 
-#endif /* MAP_H */
+#endif /* LIBDATASTRUCTURES_MAP_H */

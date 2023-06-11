@@ -2,8 +2,8 @@
  * \file   tree-node.h
  * \brief  AVL tree node - struct. and types definitions and functions declarations
  */
-#ifndef TREE_NODE_H
-#define TREE_NODE_H
+#ifndef LIBDATASTRUCTURES_TREE_NODE_H
+#define LIBDATASTRUCTURES_TREE_NODE_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -126,4 +126,4 @@ void tree_node_destroy(tree_node_s **root, void (*elem_destroy)(void **));
 } /* extern "C" */
 #endif
 
-#endif /* TREE_NODE_H */
+#endif /* LIBDATASTRUCTURES_TREE_NODE_H */

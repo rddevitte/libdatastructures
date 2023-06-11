@@ -2,8 +2,8 @@
  * \file   tree.h
  * \brief  AVL Tree - structure, types and functions
  */
-#ifndef TREE_H
-#define TREE_H
+#ifndef LIBDATASTRUCTURES_TREE_H
+#define LIBDATASTRUCTURES_TREE_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -142,4 +142,4 @@ tree_rc_e tree_destroy(tree_s **tree, void (*elem_destroy)(void **));
 } /* extern "C" */
 #endif
 
-#endif /* TREE_H */
+#endif /* LIBDATASTRUCTURES_TREE_H */

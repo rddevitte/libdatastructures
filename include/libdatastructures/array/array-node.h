@@ -2,8 +2,8 @@
  * \file   array-node.h
  * \brief  Array node - struct. and type definitions and func. declarations
  */
-#ifndef ARRAY_NODE_H
-#define ARRAY_NODE_H
+#ifndef LIBDATASTRUCTURES_ARRAY_NODE_H
+#define LIBDATASTRUCTURES_ARRAY_NODE_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -42,4 +42,4 @@ void *array_node_destroy(array_node_s **node);
 } /* extern "C" */
 #endif
 
-#endif /* ARRAY_NODE_H */
+#endif /* LIBDATASTRUCTURES_ARRAY_NODE_H */

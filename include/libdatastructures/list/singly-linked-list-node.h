@@ -2,8 +2,8 @@
  * \file   singly-linked-list-node.h
  * \brief  Circ. singly linked list node - struct. and type definitions and func. declarations
  */
-#ifndef SINGLY_LINKED_LIST_NODE_H
-#define SINGLY_LINKED_LIST_NODE_H
+#ifndef LIBDATASTRUCTURES_SINGLY_LINKED_LIST_NODE_H
+#define LIBDATASTRUCTURES_SINGLY_LINKED_LIST_NODE_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -47,4 +47,4 @@ void *s_l_list_node_destroy(s_l_list_node_s **node);
 } /* extern "C" */
 #endif
 
-#endif /* SINGLY_LINKED_LIST_NODE_H */
+#endif /* LIBDATASTRUCTURES_SINGLY_LINKED_LIST_NODE_H */

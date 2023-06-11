@@ -2,8 +2,8 @@
  * \file   pair.h
  * \brief  Key-value Pair - structure, type and functions
  */
-#ifndef PAIR_H
-#define PAIR_H
+#ifndef LIBDATASTRUCTURES_PAIR_H
+#define LIBDATASTRUCTURES_PAIR_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -44,4 +44,4 @@ void pair_destroy(pair_s **pair, void (*key_destroy)(void **), void (*value_dest
 } /* extern "C" */
 #endif
 
-#endif /* PAIR_H */
+#endif /* LIBDATASTRUCTURES_PAIR_H */

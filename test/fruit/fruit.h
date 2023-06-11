@@ -2,8 +2,8 @@
  * \file   fruit.h
  * \brief  Auxiliary lib for tests which creates, prints, compares and destroys fruit elements
  */
-#ifndef FRUIT_H
-#define FRUIT_H
+#ifndef LIBDATASTRUCTURES_FRUIT_H
+#define LIBDATASTRUCTURES_FRUIT_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -88,4 +88,4 @@ void fruit_destroy(void **fruit);
 } /* extern "C" */
 #endif
 
-#endif /* FRUIT_H */
+#endif /* LIBDATASTRUCTURES_FRUIT_H */

@@ -2,8 +2,8 @@
  * \file   rand-perm.h
  * \brief  Auxiliary lib to generate random permutations, giving a range of integers.
  */
-#ifndef RAND_PERM_H
-#define RAND_PERM_H
+#ifndef LIBDATASTRUCTURES_RAND_PERM_H
+#define LIBDATASTRUCTURES_RAND_PERM_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -52,4 +52,4 @@ void rand_perm_gen_destroy(rand_perm_gen_t *gen);
 } /* extern "C" */
 #endif
 
-#endif /* RAND_PERM_H */
+#endif /* LIBDATASTRUCTURES_RAND_PERM_H */

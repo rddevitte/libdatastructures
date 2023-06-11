@@ -2,8 +2,8 @@
  * \file   stack.h
  * \brief  Stack data structure - struct. and type definitions and functions declarations
  */
-#ifndef STACK_H
-#define STACK_H
+#ifndef LIBDATASTRUCTURES_STACK_H
+#define LIBDATASTRUCTURES_STACK_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -111,4 +111,4 @@ stack_rc_e stack_destroy(stack_s **stack, void (*elem_destroy)(void **));
 } /* extern "C" */
 #endif
 
-#endif /* STACK_H */
+#endif /* LIBDATASTRUCTURES_STACK_H */

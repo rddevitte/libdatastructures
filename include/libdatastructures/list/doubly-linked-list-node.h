@@ -2,8 +2,8 @@
  * \file   doubly-linked-list-node.h
  * \brief  Circ. doubly linked list node - struct. and type definitions and func. declarations
  */
-#ifndef DOUBLY_LINKED_LIST_NODE_H
-#define DOUBLY_LINKED_LIST_NODE_H
+#ifndef LIBDATASTRUCTURES_DOUBLY_LINKED_LIST_NODE_H
+#define LIBDATASTRUCTURES_DOUBLY_LINKED_LIST_NODE_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -49,4 +49,4 @@ void *d_l_list_node_destroy(d_l_list_node_s **node);
 } /* extern "C" */
 #endif
 
-#endif /* DOUBLY_LINKED_LIST_NODE_H */
+#endif /* LIBDATASTRUCTURES_DOUBLY_LINKED_LIST_NODE_H */
